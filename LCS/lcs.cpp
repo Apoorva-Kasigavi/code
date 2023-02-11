@@ -6,9 +6,9 @@ int findLCS(string a,string b)
     int n = a.size();
     int m = b.size();
     vector<vector<int>> dp(n+1,vector<int>(m+1,0));
-    for(int i=0;i<=n;i++)
+    for(int i=1;i<=n;i++)
     {
-        for(int j=0;j<=m;j++)
+        for(int j=1;j<=m;j++)
         {
              if(a[i-1]==b[j-1])
             {
@@ -23,7 +23,7 @@ int findLCS(string a,string b)
 }
 int main()
 {
-    string a="abcde";
-    string b="abghe";
+    string a="aabbd";
+    string b="abde";
     cout<<findLCS(a,b)<<endl;
 }
